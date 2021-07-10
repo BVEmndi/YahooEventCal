@@ -17,18 +17,13 @@ public class StepDefinitions {
 
     @Given("^User is in the sign in page$")
     public void user_is_in_the_sign_in_page() throws Throwable {
-//        System.out.println("The title of the page:"+ driver.getTitle());
-
-        //driver.navigate().to("https://consent.yahoo.com/v2/collectConsent?sessionId=3_cc-session_3f2e6401-01d0-450f-bb91-99223a86aa9c");
         sp.setConsent_page();
 
     }
     @When("^User click on sign in button$")
     public void user_click_on_sign_in_button() throws Throwable {
-//        driver.navigate().to("https://uk.yahoo.com/?guccounter=1");
     sp.setSign_in();
     }
-
     @When("^User provide \"([^\"]*)\" and \"([^\"]*)\"$")
     public void user_provide_and(String arg1, String arg2) throws Throwable {
         sp.setUser_name(arg1);
@@ -39,26 +34,38 @@ public class StepDefinitions {
         Assert.assertTrue("123",true);
 
         sp.setFinance_Link();
-        // driver.navigate();
-       // sp.setFin_yaho_logo();
+
         Assert.assertTrue("Market Data", true);
         sp.setMarket_data_link();
         sp.setEvent_calender();
         System.out.println(" calender link is clicked");
         Thread.sleep(5000);
-Assert.assertTrue("Events calendar for:13 Jun 2021 - 19 Jun 2021",true);
-//Thread.sleep(3000);
-//Assert.assertTrue("18JunFri",true);
-//Thread.sleep(5000);
-        System.out.println("hi........");
-        Thread.sleep(5000);
+        Assert.assertTrue("Events calendar for:04 Jul 2021 - 10 Jul 2021",true);
         sp.setPrev();
+        Thread.sleep(5000);
+
+        System.out.println("hi........");
+        //Thread.sleep(5000);
+        sp.setPrev();
+       Thread.sleep(5000);
+       Assert.assertTrue("Events calendar for:20 Jun 2021 - 26 Jun 2021",true);
+       //Thread.sleep(5000);
+       //Assert.assertTrue(Utils.isTextPresent("20JunSun"));
+       Thread.sleep(5000);
+       sp.setPrev();
        Thread.sleep(5000);
         Assert.assertTrue(Utils.isTextPresent("18JunFri"));
         System.out.println(" The date of 18 june fri is recognised");
-       //sp.setJune_date();
+       sp.setJune_date();
+       sp.setJenu_date1();
        Thread.sleep(5000);
-      // sp.setEarning_two();
+       sp.setJu();
+       sp.setjuneight();
+         sp.setEar();
+       Thread.sleep(5000);
+
+     //  sp.setEarning_two();
+
      //sp.setJuneeighteen();
      // sp.setEar();
         sp.setAbc();
